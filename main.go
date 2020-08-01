@@ -59,8 +59,13 @@ func main() {
 				fmt.Fprint(w, err)
 				return
 			}
+			bytes, err := json.Marshal(result)
+			if err != nil {
+				fmt.Fprint(w, err)
+				return
+			}
 
-			fmt.Fprint(w, result)
+			fmt.Fprint(w, string(bytes))
 		})
 		port := os.Getenv("PORT")
 		if len(port) == 0 {

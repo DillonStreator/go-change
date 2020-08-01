@@ -37,11 +37,21 @@ or with a custom port\
 `PORT=4141 ./go-change -a`
 
 POST `/`\
-body
+with body
 ```json
 {
-    "drawer": [1,2,3],
-    "owed": 10,
-    "paid": 14
+	"drawer": [1,2,3],
+	"owed": 10,
+	"paid": 20
 }
+```
+
+response
+```json
+[
+  3,
+  3,
+  3,
+  1
+]
 ```
