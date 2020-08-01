@@ -54,7 +54,3 @@ func Calculate(input Input) ([]int, error) {
 
 	return change, nil
 }
-
-func main() {
-	fmt.Println(Calculate(Input{Owed: 1000, Paid: 3278, Drawer: []int{2000, 1000, 500, 100, 50, 25, 10, 5}}))
-}
